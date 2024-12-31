@@ -1,0 +1,977 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "poppins", serif;
+}
+
+:root {
+    --back-color: #9B111E;
+    --back1-color: #FFD700;
+    --font-color: #f6eee5;
+    --text-color: #000000;
+
+    --font-family: "Dancing Script", serif;
+}
+
+html {
+    font-size: 60.6%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    color: var(--text-color);
+    display: flex;
+    max-width: 1440px;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+
+#dis {
+    background-color: var(--back-color);
+    font-size: 2.4rem;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    color: var(--font-color);
+}
+
+.png {
+    width: 100%;
+    min-height: 100vh;
+    background: url(gallery/hair2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    padding: 0rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.cover {
+    background-color: var(--font-color);
+    top: 0;
+    box-shadow: 0 0 2rem 0 black;
+}
+
+header.cover .logo img {
+    width: 10vw;
+}
+
+.logo img {
+    width: 12vw;
+    padding: 2rem;
+}
+
+#nav ul li {
+    display: inline;
+    text-decoration: none;
+    font-weight: 300;
+    cursor: pointer;
+    padding-left: 4rem;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 2.8rem;
+    font-weight: 700;
+    display: none;
+}
+
+header.cover #nav ul li a {
+    display: inline;
+}
+
+#nav ul li a:hover {
+    color: var(--back-color);
+    border-bottom: 2px solid var(--back-color);
+}
+
+.icon {
+    color: var(--back-color);
+    font-size: 2.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon .menu-bar {
+    cursor: pointer;
+}
+
+.icon .card {
+    margin: 3rem;
+    cursor: pointer;
+}
+
+/* dropdown menu  */
+
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    right: -10rem;
+    top: 90px;
+    height: 240px;
+    width: 0px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.active {
+    /* height: 240px; */
+    width: 300px;
+}
+
+.dropdown-menu li {
+    padding: 1.4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 8rem;
+}
+
+.dropdown-menu li a {
+    color: var(--text-color);
+    font-size: 3rem;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--back-color);
+    border-bottom: 2px solid var(--back-color);
+}
+
+/* welcome */
+
+#welcome {
+    margin-top: 5rem;
+}
+
+#welcome h1 {
+    font-size: 5rem;
+    margin-top: 4rem;
+    padding: 6rem;
+    font: 300;
+    text-align: center;
+}
+
+#welcome h1::after {
+    content: "";
+    height: 2px;
+    width: 60rem;
+    background-color: var(--back1-color);
+    display: block;
+    margin: auto;
+}
+
+#welcome .wel-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 380px;
+    gap: 8rem;
+    grid-auto-flow: dense;
+    padding: 3rem 8rem;
+}
+
+#welcome .wel-div .info {
+    font-size: 2.5rem;
+    text-align: justify;
+    font: 900;
+}
+
+#welcome .wel-div .info span {
+    font-family: var(--font-family);
+    font-size: 8rem;
+}
+
+#welcome .wel-div .img {
+    background-image: url(gallery/png3.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+/* product-slider */
+
+#product {
+    margin-top: 9rem;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+#product h1 {
+    font-size: 4rem;
+    font: 300;
+    text-align: center;
+}
+
+#product h1::after {
+    content: "";
+    height: 0.3rem;
+    width: 18rem;
+    background-color: var(--back1-color);
+    display: block;
+    margin: auto;
+}
+
+#product p {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 5rem;
+    font: 300;
+}
+
+.slider-img {
+    margin: 2rem 10rem;
+    margin-bottom: 10rem;
+}
+
+.slider-img #left,
+#right {
+    height: 50px;
+    width: 50px;
+    background-color: var(--back-color);
+    text-align: center;
+    font-size: 3rem;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--font-color);
+}
+
+.slider-img i:first-child {
+    left: 6px;
+}
+
+.slider-img i:last-child {
+    right: 6px;
+}
+
+.img-list .png-item {
+    padding: 2rem;
+    cursor: pointer;
+}
+
+#product .img-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 5rem;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 0 2rem;
+}
+
+#product .img-list img {
+    width: 250px;
+    height: 280px;
+    text-decoration: none;
+    position: relative;
+    left: 48%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 2rem 0 #aaaaaa;
+}
+
+#product .img-list #p2 {
+    position: relative;
+    top: -60%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+    font-size: 2rem;
+    font: x-large;
+}
+
+#product .img-list .png-item h3,
+#price {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#product .btn {
+    background-color: var(--back1-color);
+    font-size: 2.8rem;
+    color: var(--font-color);
+    padding: 0.8rem 3rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10rem 10rem;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#product .btn a {
+    color: var(--text-color);
+}
+
+#product .btn:hover {
+    background-color: var(--back-color);
+}
+
+
+/* img  */
+
+#img {
+    margin-top: 7rem;
+}
+
+#img .png1 {
+    width: 100%;
+    height: 90vh;
+    background-image: url(gallery/png.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img .png1 .info1 {
+    font-size: 4rem;
+    font: 500;
+    color: var(--font-color);
+    position: relative;
+    top: 70%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+}
+
+#img .png1 .info1 a .btn {
+    color: var(--font-color);
+}
+
+#img .png1 .info1 .btn {
+    background-color: var(--back-color);
+    width: 120px;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 1rem 1rem;
+    margin-top: 3rem;
+}
+
+#img .png1 .info1 a .btn:hover {
+    background-color: var(--back1-color);
+}
+
+/* our product */
+
+#png {
+    margin-top: 9rem;
+}
+
+#png h1 {
+    font-size: 4rem;
+    font: 300;
+    text-align: center;
+}
+
+#png h1::after {
+    content: "";
+    height: 0.3rem;
+    width: 22rem;
+    background-color: var(--back1-color);
+    display: block;
+    margin: auto;
+}
+
+#png .collect {
+    padding: 8rem;
+    /* overflow: hidden; */
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: 580px;
+    grid-auto-flow: dense;
+}
+
+.collect .pro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(gallery/shampoo1.jpeg);
+    background-position: center;
+    background-size: cover;
+    transition: 5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collect .pro h3,
+.pro1 h3 {
+    color: var(--font-color);
+    font-size: 5rem;
+    font: 800;
+}
+
+.collect .pro1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(gallery/mask.jpeg);
+    background-position: center;
+    background-size: cover;
+    transition: 5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collect .pro1:hover,
+.collect .pro:hover {
+    scale: 1.1;
+}
+
+.collect .pro1:hover h3,
+.collect .pro:hover h3 {
+    color: var(--back-color);
+}
+
+/* hair treatment */
+
+#treatment {
+    margin-top: 5rem;
+    background-image: url(gallery/back.jpeg);
+    background-position: center;
+}
+
+#treatment h1 {
+    font-size: 4rem;
+    font: 300;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+#treatment h1::after {
+    content: "";
+    height: 0.3rem;
+    width: 28rem;
+    background-color: var(--back1-color);
+    display: block;
+    margin: auto;
+}
+
+#treatment .hair-slide {
+    padding: 8rem;
+    /* overflow: hidden; */
+    display: grid;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: 500px;
+    grid-auto-flow: dense;
+}
+
+#treatment .hair-slide .hair-img {
+    background-image: url(gallery/slider.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#treatment .hair-slide .hair-info {
+    font: 400;
+    font-size: 2.4rem;
+    text-align: justify;
+    padding: 1rem;
+}
+
+/* service */
+
+#service {
+    margin-top: 10rem;
+}
+
+#service .slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-auto-rows: 210px;
+    grid-auto-flow: dense;
+    gap: 2.6rem;
+    overflow: hidden;
+    padding: 6rem 6rem;
+    background-color: var(--back-color);
+}
+
+#service .all-service img {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#service .all-service {
+    position: relative;
+    top: 52%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    padding: 5rem;
+}
+
+#service .all-service h3 {
+    font: 200;
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--font-color);
+}
+
+#service .all-service p {
+    font: 200;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--font-color);
+}
+
+/* footer  */
+
+#footer {
+    /* background-color:#9b9051; */
+}
+
+#footer .footer-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: 200px;
+    gap: 8.2rem;
+    padding: 6rem;
+    overflow: hidden;
+}
+
+#footer .footer-list #list {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#footer .footer-list .footer-logo img {
+    width: 22rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#footer .footer-list .list h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem;
+    text-transform: uppercase;
+}
+
+#footer .footer-list .list ul {
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#footer .footer-list .list ul li {
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+#footer .footer-list .list ul a {
+    color: var(--text-color);
+}
+
+#footer .footer-list .address h1 {
+    font-size: 3rem;
+    padding: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#footer .footer-list .address p {
+    padding: 2.5rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    text-align: center;
+    line-height: 3rem;
+}
+
+#footer .footer-list .footer-icon h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 3rem;
+    text-align: center;
+}
+
+#footer .footer-list .footer-icon a i {
+    padding: 2rem;
+    font-size: 5rem;
+    color: var(--back-color);
+}
+
+#footer .footer-list .footer-icon .i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer .line {
+    font-size: 2.4rem;
+    font: 400;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--font-color);
+    background-color: var(--back-color);
+}
+
+
+/* meadia query  */
+
+@media (max-width: 992px) {
+    #nav ul {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    .logo img {
+        width: 18vw;
+    }
+}
+
+@media (max-width:430px) {
+    #dis {
+        font-size: 1.8rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    .logo img {
+        width: 35vw;
+    }
+
+    header.cover .logo img {
+        width: 34vw;
+    }
+
+    #welcome {
+        margin-top: 2rem;
+    }
+
+    #welcome h1 {
+        font-size: 3.6rem;
+    }
+
+    #welcome h1::after {
+        width: 40rem;
+    }
+
+    #welcome .wel-div {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 220px;
+        padding: 2rem 1.8rem;
+    }
+
+    #welcome .wel-div .info span {
+        font-size: 6rem;
+        font-family: var(--font-family);
+    }
+
+    #welcome .wel-div .info {
+        font-size: 2rem;
+    }
+
+    #product h1 {
+        font-size: 4rem;
+    }
+
+    #product .img-list {
+        grid-auto-columns: calc((108% / 1) - 8px);
+        gap: 5rem;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        padding: 0 0;
+    }
+
+    #img .png1 .info1 {
+        font-size: 3.4rem;
+        font: 500;
+        color: var(--font-color);
+        position: relative;
+        top: 80%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        padding: 3rem;
+    }
+
+    #img .png1 .info1 .btn {
+        font-size: 3.2rem;
+        width: 120px;
+    }
+
+    #png .collect {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 380px;
+        padding: 8rem 1.8rem;
+    }
+
+    #treatment .hair-slide {
+        padding: 0rem 1.8rem;
+        margin-top: 8rem;
+        display: grid;
+        grid-gap: 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 420px;
+        grid-auto-flow: dense;
+    }
+
+    #treatment .hair-slide .hair-info {
+        font-size: 1.8rem;
+    }
+
+    #footer .footer-list {
+        padding: 3rem;
+        gap: 0;
+        grid-template-rows: 210px;
+    }
+
+    #footer .footer-list .footer-icon a i {
+        left: 42%;
+    }
+
+    #footer .line {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width:376px) {
+    #dis {
+        font-size: 1.8rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    .logo img {
+        width: 35vw;
+    }
+
+    header.cover .logo img {
+        width: 34vw;
+    }
+
+    #welcome h1 {
+        font-size: 2.8rem;
+        padding: 2rem 0;
+    }
+
+    #welcome h1::after {
+        width: 32rem;
+    }
+
+    #welcome .wel-div {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 210px;
+        padding: 2rem 1.8rem;
+    }
+
+    #welcome .wel-div .info span {
+        font-size: 3.6rem;
+        font-family: var(--font-family);
+        padding: 0;
+    }
+
+    #welcome .wel-div .info {
+        font-size: 1.5rem;
+    }
+
+    #welcome .wel-div .img {
+        height: 100%;
+        background-size: cover;
+        background-position: cover;
+    }
+
+    #product h1 {
+        font-size: 2.8rem;
+        padding-top: 1rem;
+    }
+
+    #product h1::after {
+        width: 11rem;
+    }
+
+    #product p {
+        font-size: 1.4rem;
+    }
+
+    #product .img-list {
+        grid-auto-columns: calc((110% / 1) - 27px);
+        gap: 1rem;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        margin: 0 -3rem;
+        padding: 0 1rem;
+    }
+
+    #product .img-list #p2 {
+        left: 15%;
+        top: -62%;
+        font-size: 1.6rem;
+    }
+
+    .slider-img #left,
+    #right {
+        font-size: 2rem;
+        height: 40px;
+        width: 40px;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #product .img-list img {
+        width: 200px;
+        height: 280px;
+        object-fit: cover;
+        text-decoration: none;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 2rem 0 #fff;
+    }
+
+    #product .img-list .png-item h3,
+    #price {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    #product .btn {
+        font-size: 2rem;
+    }
+
+    #img {
+        margin-top: 3rem;
+    }
+
+    #img .png1 .info1 {
+        font-size: 2.6rem;
+    }
+
+    #img .png1 .info1 .btn {
+        font-size: 2.6rem;
+        padding: 0.6rem 2rem;
+    }
+
+    #png {
+        margin-top: 9rem;
+    }
+
+    #png h1 {
+        font-size: 2.8rem;
+    }
+
+    #png h1::after {
+        width: 14rem;
+    }
+
+    #treatment h1 {
+        font-size: 2.8rem;
+        padding-top: 3rem;
+    }
+
+    #treatment h1::after {
+        width: 20rem;
+    }
+
+    #treatment .hair-slide .hair-info {
+        font-size: 1.2rem;
+    }
+
+    #treatment .hair-slide {
+        padding: 1rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 370px;
+        grid-auto-flow: dense;
+    }
+
+    #service {
+        margin-top: 3rem;
+    }
+    #service .slider {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-auto-rows: 210px;
+        grid-auto-flow: dense;
+        gap: 2.6rem;
+        overflow: hidden;
+        padding: 0.5rem 2rem 2rem  2rem;
+        background-color: var(--back-color);
+    }
+    #service .all-service {
+        padding: 3rem;
+    }
+    #service .all-service h3 {
+        font-size: 1.8rem;
+    }
+
+    #service .all-service p {
+        font-size: 1.2rem;
+    }
+    #footer .footer-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-template-rows: 100px;
+        gap: 10px;
+        padding: 4rem;
+    }
+    #footer .footer-list .list ul a {
+        font-size: 1.8rem;
+    }
+
+    #footer .footer-list .address h2 {
+        font-size: 2rem;
+    }
+
+    #footer .footer-list .address p {
+        font-size: 1.6rem;
+    }
+
+    #footer .footer-list .footer-icon a i {
+        font-size: 4rem;
+    }
+
+    #footer .line {
+        font-size: 1.4rem;
+    }
+}
