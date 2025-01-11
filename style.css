@@ -416,7 +416,7 @@ header.cover #nav ul li a {
 }
 
 .collect .pro {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(gallery/shampoo1.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(gallery/our.jpg);
     background-position: center;
     background-size: cover;
     transition: 5s;
@@ -434,7 +434,7 @@ header.cover #nav ul li a {
 }
 
 .collect .pro1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(gallery/mask.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(gallery/our1.jpg);
     background-position: center;
     background-size: cover;
     transition: 5s;
