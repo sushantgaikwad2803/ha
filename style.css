@@ -163,7 +163,7 @@ header.cover #nav ul li a {
 }
 
 .dropdown-menu li a:hover {
-    color: var(--back-color);
+    color: var(--back1-color);
     border-bottom: 2px solid var(--back-color);
 }
 
@@ -667,12 +667,19 @@ header.cover #nav ul li a {
     #dis {
         font-size: 1.3rem;
     }
+    .dropdown-menu.active {
+        width: 100%;
+    }
     .dropdown-menu li {
-        padding: 1.4rem;
+        padding: 0.7rem;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        padding-left: 8rem;
+        padding-left: 30%;
+    }
+    .dropdown-menu li a {
+        color: var(--text-color);
+        font-size: 2.5rem;
     }
 
     .icon {
@@ -803,6 +810,16 @@ header.cover #nav ul li a {
         width: 14rem;
     }
 
+    #png .collect {
+        padding: 5rem 1rem;
+        /* overflow: hidden; */
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 480px;
+        grid-auto-flow: dense;
+    }
+
     #treatment h1 {
         font-size: 2.8rem;
         padding-top: 3rem;
@@ -824,6 +841,47 @@ header.cover #nav ul li a {
         grid-auto-rows: 370px;
         grid-auto-flow: dense;
     }
+
+    #service {
+    margin-top: 4rem;
+    }
+
+    #service .slider {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-auto-rows: 210px;
+        grid-auto-flow: dense;
+        gap: 0rem;
+        overflow: hidden;
+        padding: 0rem 0rem;
+        margin: 0 0 2rem 0;
+        background-color: var(--back-color);
+    }
+
+    #service .all-service img {
+        position: relative;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* width: 80px; */
+        /* padding: 0.2rem; */
+    }
+    
+    #service .all-service {
+        position: relative;
+        top: 52%;
+        left: 50.5%;
+        transform: translate(-50%, -50%);        
+    }
+    
+    #service .all-service h3 {
+        font-size: 1.5rem;
+    }
+    
+    #service .all-service p {
+        font-size: 1.4rem;
+    }
+
     #footer .footer-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
@@ -888,13 +946,6 @@ header.cover #nav ul li a {
     #dis {
         font-size: 1.3rem;
     }
-    .dropdown-menu li {
-        padding: 1.4rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding-left: 8rem;
-    }
 
     .icon {
         font-size: 2rem;
@@ -1044,6 +1095,17 @@ header.cover #nav ul li a {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         grid-auto-rows: 370px;
         grid-auto-flow: dense;
+    }
+
+    #service .slider {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 210px;
+        grid-auto-flow: dense;
+        gap: 1rem;
+        overflow: hidden;
+        padding: 4rem 0rem;
+        background-color: var(--back-color);
     }
     #footer .footer-list {
         display: grid;
