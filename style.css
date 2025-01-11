@@ -54,7 +54,7 @@ body {
 .png {
     width: 100%;
     min-height: 100vh;
-    background: url(gallery/hair2.webp);
+    background: url(gallery/home.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,10 +134,11 @@ header.cover #nav ul li a {
     position: fixed;
     right: -10rem;
     top: 90px;
-    height: 240px;
+    height: 250px;
     width: 0px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background-color: var(--back-color);
+    z-index: 20;
     padding: 2rem;
     border-radius: 10px;
     overflow: hidden;
@@ -145,7 +146,6 @@ header.cover #nav ul li a {
 }
 
 .dropdown-menu.active {
-    /* height: 240px; */
     width: 300px;
 }
 
@@ -184,7 +184,7 @@ header.cover #nav ul li a {
 #welcome h1::after {
     content: "";
     height: 2px;
-    width: 60rem;
+    width: 60rem; 
     background-color: var(--back1-color);
     display: block;
     margin: auto;
@@ -304,7 +304,7 @@ header.cover #nav ul li a {
 
 #product .img-list #p2 {
     position: relative;
-    top: -60%;
+    top: -68%;
     left: 22%;
     transform: translate(-50%, -50%);
     color: var(--text-color);
@@ -489,7 +489,7 @@ header.cover #nav ul li a {
 }
 
 #treatment .hair-slide .hair-img {
-    background-image: url(gallery/slider.jpeg);
+    background-image: url(gallery/treatment.jpeg);
     background-position: center;
     background-size: cover;
 }
@@ -514,7 +514,7 @@ header.cover #nav ul li a {
     grid-auto-flow: dense;
     gap: 2.6rem;
     overflow: hidden;
-    padding: 6rem 6rem;
+    padding: 2rem 6rem;
     background-color: var(--back-color);
 }
 
@@ -665,114 +665,14 @@ header.cover #nav ul li a {
 
 @media (max-width:430px) {
     #dis {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
-
-    .icon {
-        font-size: 2rem;
-    }
-
-    .logo img {
-        width: 35vw;
-    }
-
-    header.cover .logo img {
-        width: 34vw;
-    }
-
-    #welcome {
-        margin-top: 2rem;
-    }
-
-    #welcome h1 {
-        font-size: 3.6rem;
-    }
-
-    #welcome h1::after {
-        width: 40rem;
-    }
-
-    #welcome .wel-div {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-        grid-auto-rows: 220px;
-        padding: 2rem 1.8rem;
-    }
-
-    #welcome .wel-div .info span {
-        font-size: 6rem;
-        font-family: var(--font-family);
-    }
-
-    #welcome .wel-div .info {
-        font-size: 2rem;
-    }
-
-    #product h1 {
-        font-size: 4rem;
-    }
-
-    #product .img-list {
-        grid-auto-columns: calc((108% / 1) - 8px);
-        gap: 5rem;
-        overflow: hidden;
-        scroll-behavior: smooth;
-        padding: 0 0;
-    }
-
-    #img .png1 .info1 {
-        font-size: 3.4rem;
-        font: 500;
-        color: var(--font-color);
-        position: relative;
-        top: 80%;
-        left: 52%;
-        transform: translate(-50%, -50%);
-        padding: 3rem;
-    }
-
-    #img .png1 .info1 .btn {
-        font-size: 3.2rem;
-        width: 120px;
-    }
-
-    #png .collect {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-        grid-auto-rows: 380px;
-        padding: 8rem 1.8rem;
-    }
-
-    #treatment .hair-slide {
-        padding: 0rem 1.8rem;
-        margin-top: 8rem;
-        display: grid;
-        grid-gap: 5rem;
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-        grid-auto-rows: 420px;
-        grid-auto-flow: dense;
-    }
-
-    #treatment .hair-slide .hair-info {
-        font-size: 1.8rem;
-    }
-
-    #footer .footer-list {
-        padding: 3rem;
-        gap: 0;
-        grid-template-rows: 210px;
-    }
-
-    #footer .footer-list .footer-icon a i {
-        left: 42%;
-    }
-
-    #footer .line {
-        font-size: 1.9rem;
-    }
-}
-
-@media (max-width:376px) {
-    #dis {
-        font-size: 1.8rem;
+    .dropdown-menu li {
+        padding: 1.4rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 8rem;
     }
 
     .icon {
@@ -832,8 +732,8 @@ header.cover #nav ul li a {
     }
 
     #product .img-list {
-        grid-auto-columns: calc((110% / 1) - 27px);
-        gap: 1rem;
+        grid-auto-columns: calc((110% / 1) - 28px);
+        gap: 1.4rem;
         overflow: hidden;
         scroll-behavior: smooth;
         margin: 0 -3rem;
@@ -842,7 +742,7 @@ header.cover #nav ul li a {
 
     #product .img-list #p2 {
         left: 15%;
-        top: -62%;
+        top: -68%;
         font-size: 1.6rem;
     }
 
@@ -862,7 +762,7 @@ header.cover #nav ul li a {
         height: 280px;
         object-fit: cover;
         text-decoration: none;
-        left: 50%;
+        left: 55%;
         top: 50%;
         transform: translate(-50%, -50%);
         box-shadow: 0 0 2rem 0 #fff;
@@ -875,7 +775,7 @@ header.cover #nav ul li a {
     }
 
     #product .btn {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     #img {
@@ -924,53 +824,282 @@ header.cover #nav ul li a {
         grid-auto-rows: 370px;
         grid-auto-flow: dense;
     }
+    #footer .footer-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-template-rows: 100px;
+        gap: 10px;
+        /* padding: 4rem; */
+    }
+    #footer .footer-list .footer-logo img {
+        width: 20rem;
+    }
+    
+    #footer .footer-list .list h1 {
+        font-size: 2.4rem;
+        padding: 1rem;
+    }
+    
+    #footer .footer-list .list ul {
+        font-size: 1.6rem;
+    }
+    
+    #footer .footer-list .list ul li {
+        padding: 0.4rem;
+    }
+    
+    #footer .footer-list .list ul a {
+        color: var(--text-color);
+        font-size: 1.6rem;
+    }
+    
+    #footer .footer-list .address h1 {
+        font-size: 2.4rem;
+        padding: 1rem;
+    }
+    
+    #footer .footer-list .address p {
+        padding: 1rem;
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+    
+    #footer .footer-list .footer-icon h1 {
+        font-size: 2.4rem;
+        padding: 1rem;
+    }
+    
+    #footer .footer-list .footer-icon a i {
+        padding: 1rem;
+        font-size: 3rem;
+    }
+    
+    #footer .footer-list .footer-icon .i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #footer .line {
+        font-size: 1.4rem;
+    }
+}
 
-    #service {
+@media (max-width:376px) {
+    #dis {
+        font-size: 1.3rem;
+    }
+    .dropdown-menu li {
+        padding: 1.4rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 8rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    .logo img {
+        width: 35vw;
+    }
+
+    header.cover .logo img {
+        width: 34vw;
+    }
+
+    #welcome h1 {
+        font-size: 2.8rem;
+        padding: 2rem 0;
+    }
+
+    #welcome h1::after {
+        width: 32rem;
+    }
+
+    #welcome .wel-div {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 210px;
+        padding: 2rem 1.8rem;
+    }
+
+    #welcome .wel-div .info span {
+        font-size: 3.6rem;
+        font-family: var(--font-family);
+        padding: 0;
+    }
+
+    #welcome .wel-div .info {
+        font-size: 1.5rem;
+    }
+
+    #welcome .wel-div .img {
+        height: 100%;
+        background-size: cover;
+        background-position: cover;
+    }
+
+    #product h1 {
+        font-size: 2.8rem;
+        padding-top: 1rem;
+    }
+
+    #product h1::after {
+        width: 11rem;
+    }
+
+    #product p {
+        font-size: 1.4rem;
+    }
+
+    #product .img-list {
+        grid-auto-columns: calc((110% / 1) - 28px);
+        gap: 1.4rem;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        margin: 0 -3rem;
+        padding: 0 1rem;
+    }
+
+    #product .img-list #p2 {
+        left: 15%;
+        top: -68%;
+        font-size: 1.6rem;
+    }
+
+    .slider-img #left,
+    #right {
+        font-size: 2rem;
+        height: 40px;
+        width: 40px;
+        top: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #product .img-list img {
+        width: 200px;
+        height: 280px;
+        object-fit: cover;
+        text-decoration: none;
+        left: 55%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 2rem 0 #fff;
+    }
+
+    #product .img-list .png-item h3,
+    #price {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    #product .btn {
+        font-size: 1.6rem;
+    }
+
+    #img {
         margin-top: 3rem;
     }
-    #service .slider {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        grid-auto-rows: 210px;
-        grid-auto-flow: dense;
-        gap: 2.6rem;
-        overflow: hidden;
-        padding: 0.5rem 2rem 2rem  2rem;
-        background-color: var(--back-color);
-    }
-    #service .all-service {
-        padding: 3rem;
-    }
-    #service .all-service h3 {
-        font-size: 1.8rem;
+
+    #img .png1 .info1 {
+        font-size: 2.6rem;
     }
 
-    #service .all-service p {
+    #img .png1 .info1 .btn {
+        font-size: 2.6rem;
+        padding: 0.6rem 2rem;
+    }
+
+    #png {
+        margin-top: 9rem;
+    }
+
+    #png h1 {
+        font-size: 2.8rem;
+    }
+
+    #png h1::after {
+        width: 14rem;
+    }
+
+    #treatment h1 {
+        font-size: 2.8rem;
+        padding-top: 3rem;
+    }
+
+    #treatment h1::after {
+        width: 20rem;
+    }
+
+    #treatment .hair-slide .hair-info {
         font-size: 1.2rem;
+    }
+
+    #treatment .hair-slide {
+        padding: 1rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-auto-rows: 370px;
+        grid-auto-flow: dense;
     }
     #footer .footer-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         grid-template-rows: 100px;
         gap: 10px;
-        padding: 4rem;
+        /* padding: 4rem; */
     }
-    #footer .footer-list .list ul a {
-        font-size: 1.8rem;
+    #footer .footer-list .footer-logo img {
+        width: 20rem;
     }
-
-    #footer .footer-list .address h2 {
-        font-size: 2rem;
+    
+    #footer .footer-list .list h1 {
+        font-size: 2.4rem;
+        padding: 1rem;
     }
-
-    #footer .footer-list .address p {
+    
+    #footer .footer-list .list ul {
         font-size: 1.6rem;
     }
-
-    #footer .footer-list .footer-icon a i {
-        font-size: 4rem;
+    
+    #footer .footer-list .list ul li {
+        padding: 0.4rem;
     }
-
+    
+    #footer .footer-list .list ul a {
+        color: var(--text-color);
+        font-size: 1.6rem;
+    }
+    
+    #footer .footer-list .address h1 {
+        font-size: 2.4rem;
+        padding: 1rem;
+    }
+    
+    #footer .footer-list .address p {
+        padding: 1rem;
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+    
+    #footer .footer-list .footer-icon h1 {
+        font-size: 2.4rem;
+        padding: 1rem;
+    }
+    
+    #footer .footer-list .footer-icon a i {
+        padding: 1rem;
+        font-size: 3rem;
+    }
+    
+    #footer .footer-list .footer-icon .i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     #footer .line {
         font-size: 1.4rem;
     }
